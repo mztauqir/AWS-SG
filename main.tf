@@ -9,7 +9,7 @@ resource "aws_security_group" "this" {
     to_port     = 5444
     protocol    = "tcp"
     cidr_blocks = ["192.168.1.0/24"]
-    self        = true
+
   }
 
 ingress {
