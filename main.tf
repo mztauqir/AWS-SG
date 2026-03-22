@@ -12,6 +12,14 @@ resource "aws_security_group" "this" {
     self        = true
   }
 
+ingress {
+  description = "Allow SSH from internal network"
+  from_port   = 22
+  to_port     = 22
+  protocol    = "tcp"
+  cidr_blocks = ["192.168.1.0/24"]
+}
+
   ingress {
     description = "Allow-authorized-networks-SSL-connectivity-into-vpc-endpoint-interface"
     from_port   = 443
