@@ -5,8 +5,8 @@ resource "aws_security_group" "this" {
 
   ingress {
     description = "Security-group-rule"
-    from_port   = 5444
-    to_port     = 5444
+    from_port   = 23
+    to_port     = 23
     protocol    = "tcp"
     cidr_blocks = ["192.168.1.0/24"]
 
